@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* InvoiCy API Docs — Design System
+ * All colors MUST be HSL.
+ * Brand: deep navy #002F4F, navy #074B7F, blue #1A79C2, orange #FF8500
+ */
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 207 100% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 207 100% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 100% 11%;
+
+    /* Brand */
+    --brand-deep: 207 100% 15%;       /* #002F4F */
+    --brand-navy: 209 89% 26%;        /* #074B7F */
+    --brand-blue: 207 76% 43%;        /* #1A79C2 */
+    --brand-orange: 31 100% 50%;      /* #FF8500 */
+    --brand-orange-hover: 28 100% 46%;
+
+    --primary: 209 89% 26%;
+    --primary-foreground: 210 40% 98%;
+
+    --accent: 31 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 207 100% 15%;
+
+    --muted: 210 30% 95%;
+    --muted-foreground: 215 16% 42%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 28% 88%;
+    --input: 214 28% 88%;
+    --ring: 207 76% 43%;
+
+    --radius: 0.75rem;
+
+    /* HTTP method colors (HSL) */
+    --method-get: 142 71% 45%;
+    --method-post: 217 91% 60%;
+    --method-put: 38 92% 50%;
+    --method-delete: 0 84% 60%;
+    --method-patch: 271 81% 56%;
+
+    /* Code surface */
+    --code-bg: 207 100% 10%;
+    --code-fg: 213 27% 90%;
+    --code-key: 199 95% 74%;
+    --code-string: 142 60% 65%;
+    --code-number: 31 95% 65%;
+    --code-bool: 271 76% 75%;
+
+    /* Sidebar */
+    --sidebar-background: 209 89% 26%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-deep: 207 100% 15%;
+    --sidebar-hover: 207 76% 43%;
+    --sidebar-active: 207 100% 11%;
+    --sidebar-border: 209 50% 35%;
+    --sidebar-muted: 210 30% 80%;
+
+    /* Elevation */
+    --shadow-sm: 0 1px 2px 0 hsl(207 100% 15% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(207 100% 15% / 0.08);
+    --shadow-lg: 0 12px 32px -8px hsl(207 100% 15% / 0.12);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .method-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff !important;
+    min-width: 56px;
+  }
+  .method-GET    { background-color: hsl(var(--method-get)); color: #fff !important; }
+  .method-POST   { background-color: hsl(var(--method-post)); color: #fff !important; }
+  .method-PUT    { background-color: hsl(var(--method-put)); color: #fff !important; }
+  .method-DELETE { background-color: hsl(var(--method-delete)); color: #fff !important; }
+  .method-PATCH  { background-color: hsl(var(--method-patch)); color: #fff !important; }
+
+  .endpoint-card {
+    @apply rounded-2xl border border-border bg-card;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .code-surface {
+    background-color: hsl(var(--code-bg));
+    color: hsl(var(--code-fg));
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--sidebar-deep)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--sidebar-deep));
+    border-radius: 9999px;
+  }
+}

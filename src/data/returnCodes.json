@@ -1,0 +1,537 @@
+[
+  {
+    "categoria": "MDF-e",
+    "codigo": "#inv0003",
+    "mensagem": "Erro na Estrutura do MDF-e"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "#inv0004",
+    "mensagem": "Erro na Estrutura do Evento"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "100",
+    "mensagem": "Documentos Processados"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "100",
+    "mensagem": "Documentos processados"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "100",
+    "mensagem": "Documentos processados"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "100",
+    "mensagem": "Documentos processados"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "100",
+    "mensagem": "Documentos processados"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "100",
+    "mensagem": "Documentos processados"
+  },
+  {
+    "categoria": "Cadastro de Empresa",
+    "codigo": "100",
+    "mensagem": "Solicitação de cadastro recebida"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "100",
+    "mensagem": "Autorizado o uso"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "101",
+    "mensagem": "Cancelamento homologado"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "102",
+    "mensagem": "Inutilização de número homologado"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "103",
+    "mensagem": "Falha na validação do certificado digital"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "103",
+    "mensagem": "Falha na validação do certificado digital"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "103",
+    "mensagem": "Falha na validação do certificado digital"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "103",
+    "mensagem": "Falha na validação do certificado digital"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "103",
+    "mensagem": "Falha na validação do certificado digital"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "103",
+    "mensagem": "Falha na validação do certificado digital"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "104",
+    "mensagem": "Certificado Digital não informado"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "104",
+    "mensagem": "Certificado Digital não informado"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "104",
+    "mensagem": "Certificado Digital não informado"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "104",
+    "mensagem": "Certificado Digital não informado"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "104",
+    "mensagem": "Certificado Digital não informado"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "104",
+    "mensagem": "Certificado Digital não informado"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "105",
+    "mensagem": "Documento pendente"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "106",
+    "mensagem": "Documento não consta na base de dados do InvoiCy"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "108",
+    "mensagem": "Entrada da SEFAZ em contingência"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "108",
+    "mensagem": "Entrada da SEFAZ em contingência"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "108",
+    "mensagem": "Entrada da SEFAZ em contingência"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "108",
+    "mensagem": "Entrada da SEFAZ em contingência"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "108",
+    "mensagem": "Entrada da SEFAZ em contingência"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "109",
+    "mensagem": "SEFAZ em contingência"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "109",
+    "mensagem": "SEFAZ em contingência"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "109",
+    "mensagem": "SEFAZ em contingência"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "109",
+    "mensagem": "SEFAZ em contingência"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "109",
+    "mensagem": "SEFAZ em contingência"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "111",
+    "mensagem": "Contingência Offline"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "111",
+    "mensagem": "Contingência Offline"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "111",
+    "mensagem": "Contingência Offline"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "112",
+    "mensagem": "Documento está rejeitado"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "113",
+    "mensagem": "Documento está com status pendente"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "117",
+    "mensagem": "Nenhum documento localizado na base de dados"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "117",
+    "mensagem": "Nenhum documento localizado na base de dados"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "117",
+    "mensagem": "Nenhum documento localizado na base de dados"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "117",
+    "mensagem": "Nenhum documento localizado na base de dados"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "117",
+    "mensagem": "Nenhum documento localizado na base de dados"
+  },
+  {
+    "categoria": "Documento Enviado",
+    "codigo": "135",
+    "mensagem": "Evento autorizado e vinculado ao documento"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "145",
+    "mensagem": "Falha na estrutura XML do documento enviado"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "145",
+    "mensagem": "Falha na estrutura XML do documento enviado"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "145",
+    "mensagem": "Falha na estrutura do RPS enviado"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "145",
+    "mensagem": "Falha na estrutura XML do documento enviado"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "145",
+    "mensagem": "Falha na estrutura XML do documento enviado"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "145",
+    "mensagem": "Falha na estrutura XML do documento enviado"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "173",
+    "mensagem": "Chave de comunicação inválida"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "173",
+    "mensagem": "Chave de comunicação inválida"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "173",
+    "mensagem": "Chave de comunicação inválida"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "173",
+    "mensagem": "Chave de comunicação inválida"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "173",
+    "mensagem": "Chave de comunicação inválida"
+  },
+  {
+    "categoria": "Cadastro de Empresa",
+    "codigo": "173",
+    "mensagem": "Chave de comunicação ou chave de parceiro inválida"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "174",
+    "mensagem": "Documento e ambiente não identificados"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "174",
+    "mensagem": "Documento e ambiente não identificados"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "174",
+    "mensagem": "Documento e ambiente não identificados"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "174",
+    "mensagem": "Documento e ambiente não identificados"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "174",
+    "mensagem": "Documento e ambiente não identificados"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "176",
+    "mensagem": "Tipo documento não identificado"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "176",
+    "mensagem": "Tipo documento não identificado"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "176",
+    "mensagem": "Tipo documento não identificado"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "176",
+    "mensagem": "Tipo documento não identificado"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "176",
+    "mensagem": "Tipo documento não identificado"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "176",
+    "mensagem": "Tipo documento não identificado"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "179",
+    "mensagem": "Consumo indevido do Web Service"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "179",
+    "mensagem": "Consumo indevido do Web Service"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "179",
+    "mensagem": "Consumo indevido do Web Service"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "179",
+    "mensagem": "Consumo indevido do Web Service"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "179",
+    "mensagem": "Consumo indevido do Web Service"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "199",
+    "mensagem": "Falha na busca dos dados para emissão"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "199",
+    "mensagem": "Falha na busca dos dados para emissão"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "199",
+    "mensagem": "Falha na busca dos dados para emissão"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "199",
+    "mensagem": "Falha na busca dos dados para emissão"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "199",
+    "mensagem": "Falha na busca dos dados para emissão"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "201",
+    "mensagem": "Falha na assinatura digital"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "201",
+    "mensagem": "Falha na assinatura digital"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "201",
+    "mensagem": "Falha na assinatura digital"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "201",
+    "mensagem": "Falha na assinatura digital"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "201",
+    "mensagem": "Falha na assinatura digital"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "602",
+    "mensagem": "Não foi encontrado Web Service para enviar o documento"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "602",
+    "mensagem": "Não foi encontrado Web Service para enviar o documento"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "602",
+    "mensagem": "Não foi encontrado Web Service para enviar o documento"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "602",
+    "mensagem": "Não foi encontrado Web Service para enviar o documento"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "602",
+    "mensagem": "Não foi encontrado Web Service para enviar o documento"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "606",
+    "mensagem": "Empresa não está habilitada para utilizar o sistema"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "606",
+    "mensagem": "Empresa não está habilitada para utilizar o sistema"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "606",
+    "mensagem": "Empresa não está habilitada para utilizar o sistema"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "606",
+    "mensagem": "Empresa não está habilitada para utilizar o sistema"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "606",
+    "mensagem": "Empresa não está habilitada para utilizar o sistema"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "606",
+    "mensagem": "Empresa não está habilitada para utilizar o sistema"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "607",
+    "mensagem": "Empresa não está licenciada para utilizar o módulo e ambiente informado"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "607",
+    "mensagem": "Empresa não está licenciada para utilizar o módulo e ambiente informado"
+  },
+  {
+    "categoria": "NFS-e",
+    "codigo": "607",
+    "mensagem": "Empresa não está licenciada para utilizar o módulo e ambiente informado"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "607",
+    "mensagem": "Empresa não está licenciada para utilizar o módulo e ambiente informado"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "607",
+    "mensagem": "Empresa não está licenciada para utilizar o módulo e ambiente informado"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "607",
+    "mensagem": "Empresa não está licenciada para utilizar o módulo e ambiente informado"
+  },
+  {
+    "categoria": "NF-e",
+    "codigo": "999",
+    "mensagem": "Erro genérico"
+  },
+  {
+    "categoria": "NFC-e",
+    "codigo": "999",
+    "mensagem": "Erro genérico"
+  },
+  {
+    "categoria": "NFCom",
+    "codigo": "999",
+    "mensagem": "Erro genérico"
+  },
+  {
+    "categoria": "CT-e",
+    "codigo": "999",
+    "mensagem": "Erro genérico"
+  },
+  {
+    "categoria": "MDF-e",
+    "codigo": "999",
+    "mensagem": "Erro genérico"
+  }
+]
