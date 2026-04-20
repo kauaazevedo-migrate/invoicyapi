@@ -17,7 +17,10 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
   const [tab, setTab] = useState<"request" | "response">(initialTab);
   const hasCode = hasReq || hasRes;
   const hasRelatedContent =
-    !!endpoint.article_url || !!endpoint.examples_url || !!endpoint.notes;
+    !!endpoint.article_url ||
+    !!endpoint.examples_url ||
+    !!endpoint.layout_url ||
+    !!endpoint.notes;
 
   return (
     <article
@@ -83,6 +86,18 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
                     className="inline-flex w-fit items-center gap-1 text-sm font-semibold text-brand-orange hover:underline"
                   >
                     {endpoint.examples_label ?? "Ver exemplos no GitHub"}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
+
+                {endpoint.layout_url && (
+                  <a
+                    href={endpoint.layout_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-fit items-center gap-1 text-sm font-semibold text-brand-orange hover:underline"
+                  >
+                    {endpoint.layout_label ?? "Ver layout"}
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 )}

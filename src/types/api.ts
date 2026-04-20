@@ -13,6 +13,8 @@ export interface Endpoint {
   article_label?: string;
   examples_url?: string;
   examples_label?: string;
+  layout_url?: string;
+  layout_label?: string;
   notes?: string;
 }
 
