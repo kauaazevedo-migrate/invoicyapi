@@ -14,6 +14,16 @@ export function AuthenticationSection() {
         Para emissão, consulta ou cancelamento de notas fiscais, deve ser gerado o <strong>JWT de Empresa</strong>.
       </p>
 
+      <div className="mt-6 rounded-xl overflow-hidden border border-border aspect-video">
+        <iframe
+          src="https://www.youtube.com/embed/RxMNQAeRCRM"
+          title="Como fazer autenticação na API Invoicy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      </div>
+
       <div className="mt-6 grid lg:grid-cols-2 gap-4">
         <div className="rounded-xl border border-brand-blue/25 bg-brand-blue/5 p-4">
           <h3 className="text-sm font-bold text-brand-deep mb-2">1) Gerar JWT de Parceiro</h3>
