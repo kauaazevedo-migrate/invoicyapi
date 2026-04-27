@@ -29,3 +29,8 @@ dist-ssr
 # Variaveis de Ambiente
 .env
 .env.*
+
+
+# Claude configs
+
+.claude
