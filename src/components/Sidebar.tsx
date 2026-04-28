@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import { ChevronRight, Search, Folder, BookOpen, X } from "lucide-react";
-import invoicyDevLogo from "@/assets/invoicy-dev-logo.png";
+import { Icon } from "@iconify/react";
+import invoicyDevLogo from "@/assets/invoicy-dev-logo.svg";
 import {
   CATEGORY_ORDER,
   CATEGORY_LABEL,
@@ -70,30 +70,28 @@ export function Sidebar({ activeId, onNavigate, mobileOpen, onCloseMobile }: Sid
 
       <aside
         className={cn(
-          "fixed lg:sticky top-0 left-0 z-40 h-screen w-[300px] flex flex-col bg-sidebar text-sidebar-foreground transition-transform lg:translate-x-0",
+          "fixed lg:sticky top-0 left-0 z-40 h-screen w-[300px] flex flex-col bg-sidebar-gradient text-sidebar-foreground transition-transform lg:translate-x-0",
           mobileOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
-        <div className="flex items-center justify-between gap-3 px-5 py-5 border-b border-sidebar-border">
-          <div className="flex items-center min-w-0">
-            <img
-              src={invoicyDevLogo}
-              alt="InvoiCy for Dev"
-              className="h-8 w-auto object-contain"
-            />
-          </div>
+        <div className="relative flex items-center justify-center px-5 py-5 border-b border-sidebar-border">
+          <img
+            src={invoicyDevLogo}
+            alt="InvoiCy for Dev"
+            className="h-10 w-auto object-contain"
+          />
           <button
-            className="lg:hidden p-1.5 rounded-md hover:bg-sidebar-deep"
+            className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 p-1.5 rounded-md hover:bg-sidebar-deep"
             onClick={onCloseMobile}
             aria-label="Fechar menu"
           >
-            <X className="h-5 w-5" />
+            <Icon icon="lucide:x" className="h-5 w-5" />
           </button>
         </div>
 
         <div className="px-4 py-3 border-b border-sidebar-border">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-sidebar-muted" />
+            <Icon icon="lucide:search" className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-sidebar-muted" />
             <input
               type="text"
               value={query}
@@ -109,7 +107,7 @@ export function Sidebar({ activeId, onNavigate, mobileOpen, onCloseMobile }: Sid
           {!searchActive && (
             <FolderBlock
               title="INTRODUÇÃO"
-              icon={<BookOpen className="h-3.5 w-3.5" />}
+              icon={<Icon icon="lucide:book-open" className="h-3.5 w-3.5" />}
               open={openFolders.introducao}
               onToggle={() => toggleFolder("introducao")}
             >
@@ -158,7 +156,7 @@ export function Sidebar({ activeId, onNavigate, mobileOpen, onCloseMobile }: Sid
               <FolderBlock
                 key={cat}
                 title={CATEGORY_LABEL[cat] ?? cat}
-                icon={<Folder className="h-3.5 w-3.5" />}
+                icon={<Icon icon="lucide:folder" className="h-3.5 w-3.5" />}
                 open={!!isOpen}
                 onToggle={() => toggleFolder(cat)}
                 count={items.length}
@@ -171,7 +169,7 @@ export function Sidebar({ activeId, onNavigate, mobileOpen, onCloseMobile }: Sid
                         <li key={groupLabel}>
                           <FolderBlock
                             title={groupLabel}
-                            icon={<Folder className="h-3.5 w-3.5" />}
+                            icon={<Icon icon="lucide:folder" className="h-3.5 w-3.5" />}
                             open={groupOpen}
                             onToggle={() => toggleFolder(groupKey)}
                             count={groupItems.length}
@@ -232,7 +230,8 @@ function FolderBlock({
         onClick={onToggle}
         className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-sidebar-deep transition-colors"
       >
-        <ChevronRight
+        <Icon
+          icon="lucide:chevron-right"
           className={cn(
             "h-3.5 w-3.5 text-sidebar-muted transition-transform shrink-0",
             open && "rotate-90",
@@ -269,10 +268,10 @@ function NavItem({
       <button
         onClick={onClick}
         className={cn(
-          "w-full text-left flex items-center gap-2 px-3 py-2 rounded-md text-[13px] transition-all border-l-2",
+          "w-full text-left flex items-center gap-2 px-3 py-2 rounded-md text-[13px] transition-all",
           active
-            ? "bg-sidebar-active text-white font-semibold border-brand-orange"
-            : "text-sidebar-foreground/85 hover:bg-sidebar-deep hover:text-white border-transparent",
+            ? "bg-white/10 text-white font-semibold"
+            : "text-sidebar-foreground/85 hover:bg-white/5 hover:text-white",
         )}
       >
         {method && (

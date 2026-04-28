@@ -1,5 +1,3 @@
-import { ShieldCheck } from "lucide-react";
-
 export function OverviewSection() {
   return (
     <section id="intro-overview" className="endpoint-card p-6 md:p-10 scroll-mt-24 relative overflow-hidden">
@@ -12,11 +10,11 @@ export function OverviewSection() {
           Documentação técnica
         </span>
         <h1 className="text-3xl md:text-4xl font-extrabold text-brand-deep tracking-tight mb-3">
-          Bem-vindo ao InvoiCy!
+          Bem-vindo a documentação do InvoiCy!
         </h1>
         <p className="text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl">
-          Documentação completa para integração com documentos fiscais eletrônicos: NF-e, NFC-e,
-          NFS-e, CT-e, MDF-e e NFCom — de forma simples e segura.
+          Tudo o que você precisa para integrar NF-e, NFC-e, NFS-e, CT-e, MDF-e e NFCom à sua
+          aplicação. Guias práticos, exemplos reais e referência completa da API.
         </p>
 
         <h2 className="text-lg font-bold text-brand-deep mt-10 mb-4">Ambientes disponíveis</h2>

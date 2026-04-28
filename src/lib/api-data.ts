@@ -5,6 +5,18 @@ import type { Endpoint, EndpointsDb, ReturnCode } from "@/types/api";
 export const ENDPOINTS_DB = endpointsRaw as unknown as EndpointsDb;
 export const RETURN_CODES_DB = returnCodesRaw as unknown as ReturnCode[];
 
+export type ApiEnv = "homolog" | "prod";
+
+export const BASE_URLS: Record<ApiEnv, string> = {
+  homolog: "https://apibrhomolog.invoicy.com.br",
+  prod: "https://apibr.invoicy.com.br",
+};
+
+export const ENV_LABEL: Record<ApiEnv, string> = {
+  homolog: "Homologação",
+  prod: "Produção",
+};
+
 // Display order; "WebHooks" in JSON normalized to display "Webhooks"
 export const CATEGORY_ORDER = [
   "Empresas",

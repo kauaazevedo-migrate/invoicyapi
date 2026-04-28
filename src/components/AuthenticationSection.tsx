@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 export function AuthenticationSection() {
   return (
     <section id="intro-authentication" className="endpoint-card p-6 md:p-8 scroll-mt-24">
-      <h2 className="text-2xl md:text-3xl font-bold text-brand-deep mb-3">Autenticação</h2>
+      <h2 className="text-2xl md:text-3xl font-extrabold text-brand-deep mb-3">Autenticação</h2>
       <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-4xl">
         A autenticação na API utiliza JWT e exige o header{" "}
         <code className="font-mono text-[12px] bg-secondary border border-border text-brand-orange px-1.5 py-0.5 rounded">

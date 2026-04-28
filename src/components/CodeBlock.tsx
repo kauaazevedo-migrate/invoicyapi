@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Check, Copy } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
+import { useCopyToClipboard } from "@/hooks/use-copy";
 
 interface CodeBlockProps {
   value: unknown;
@@ -32,22 +32,14 @@ function syntaxHighlight(json: string): string {
 }
 
 export function CodeBlock({ value, language = "json", className }: CodeBlockProps) {
-  const [copied, setCopied] = useState(false);
+  const { copied, copy } = useCopyToClipboard();
   const text =
     typeof value === "string" ? value : JSON.stringify(value, null, 2);
 
   const html =
     language === "json" ? syntaxHighlight(text) : text.replace(/</g, "&lt;");
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1600);
-    } catch {
-      /* ignore */
-    }
-  };
+  const handleCopy = () => copy(text);
 
   return (
     <div className={cn("relative group code-surface rounded-xl overflow-hidden", className)}>
@@ -59,12 +51,12 @@ export function CodeBlock({ value, language = "json", className }: CodeBlockProp
       >
         {copied ? (
           <>
-            <Check className="h-3.5 w-3.5 text-[hsl(var(--method-get))]" />
+            <Icon icon="lucide:check" className="h-3.5 w-3.5 text-[hsl(var(--method-get))]" />
             Copiado
           </>
         ) : (
           <>
-            <Copy className="h-3.5 w-3.5" />
+            <Icon icon="lucide:copy" className="h-3.5 w-3.5" />
             Copiar
           </>
         )}

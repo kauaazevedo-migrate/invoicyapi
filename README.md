@@ -21,16 +21,17 @@ Este projeto é uma **Single Page Application (SPA)** construída com React + Ty
 
 | Camada | Tecnologia |
 |---|---|
-| Framework | React 18.3 + TypeScript |
-| Bundler | Vite 5.4 |
-| Roteamento | React Router v6 |
+| Framework | React 19 + TypeScript 6 |
+| Bundler | Vite 8 |
+| Roteamento | React Router v7 |
 | UI Components | shadcn/ui (Radix UI) |
-| Estilização | Tailwind CSS 3.4 |
+| Estilização | Tailwind CSS v4 (`@theme` em CSS) |
+| Animações | tw-animate-css |
 | Estado assíncrono | TanStack React Query v5 |
-| Formulários | React Hook Form + Zod |
+| Formulários | React Hook Form + Zod 4 |
 | Ícones | Lucide React |
 | Notificações | Sonner |
-| Testes | Vitest |
+| Testes | Vitest 4 + Testing Library |
 
 ---
 

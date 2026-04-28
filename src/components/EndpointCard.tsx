@@ -1,21 +1,31 @@
 import { useState } from "react";
-import { ExternalLink, BookOpen } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { CodeBlock } from "./CodeBlock";
 import { getMethodClass } from "@/lib/api-data";
 import type { Endpoint } from "@/types/api";
 import { cn } from "@/lib/utils";
+import { useEnv } from "@/contexts/EnvContext";
+import { buildCurl } from "@/lib/curl";
+import { useCopyToClipboard } from "@/hooks/use-copy";
 
 interface EndpointCardProps {
   endpoint: Endpoint;
   category: string;
 }
 
+type EndpointTab = "request" | "response" | "curl";
+
 export function EndpointCard({ endpoint, category }: EndpointCardProps) {
+  const { baseUrl } = useEnv();
   const hasReq = endpoint.request_body !== null && endpoint.request_body !== undefined;
   const hasRes = endpoint.response_body !== null && endpoint.response_body !== undefined;
-  const initialTab: "request" | "response" = hasReq ? "request" : "response";
-  const [tab, setTab] = useState<"request" | "response">(initialTab);
-  const hasCode = hasReq || hasRes;
+  const initialTab: EndpointTab = hasReq ? "request" : hasRes ? "response" : "curl";
+  const [tab, setTab] = useState<EndpointTab>(initialTab);
+  const hasCode = true; // cURL is always available
+  const curlSnippet = buildCurl(endpoint, baseUrl);
+
+  const { copied: pathCopied, copy: copyPath } = useCopyToClipboard();
+  const { copied: linkCopied, copy: copyLink } = useCopyToClipboard();
   const hasRelatedContent =
     !!endpoint.article_url ||
     !!endpoint.examples_url ||
@@ -43,9 +53,37 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
               <h2 className="text-xl md:text-2xl font-bold text-brand-deep mb-2 leading-tight">
                 {endpoint.title}
               </h2>
-              <code className="inline-block max-w-full overflow-x-auto text-[13px] font-mono text-brand-navy bg-secondary px-3 py-1.5 rounded-md border border-border break-all">
-                {endpoint.path}
-              </code>
+              <div className="flex flex-wrap items-center gap-1.5">
+                <code className="inline-block max-w-full overflow-x-auto text-[13px] font-mono text-brand-navy bg-secondary px-3 py-1.5 rounded-md border border-border break-all">
+                  {endpoint.path}
+                </code>
+                <button
+                  type="button"
+                  onClick={() => copyPath(endpoint.path)}
+                  aria-label="Copiar path do endpoint"
+                  className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-border bg-secondary/60 text-muted-foreground hover:text-brand-deep transition-colors"
+                  title={pathCopied ? "Copiado!" : "Copiar path"}
+                >
+                  <Icon
+                    icon={pathCopied ? "lucide:check" : "lucide:copy"}
+                    className={cn("h-3.5 w-3.5", pathCopied && "text-[hsl(var(--method-get))]")}
+                  />
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    copyLink(`${window.location.origin}${window.location.pathname}#${endpoint.id}`)
+                  }
+                  aria-label="Copiar link do endpoint"
+                  className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-border bg-secondary/60 text-muted-foreground hover:text-brand-deep transition-colors"
+                  title={linkCopied ? "Link copiado!" : "Copiar link compartilhável"}
+                >
+                  <Icon
+                    icon={linkCopied ? "lucide:check" : "lucide:link"}
+                    className={cn("h-3.5 w-3.5", linkCopied && "text-[hsl(var(--method-get))]")}
+                  />
+                </button>
+              </div>
             </div>
           </header>
 
@@ -59,7 +97,7 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
           {hasRelatedContent && (
             <aside className="rounded-xl border border-dashed border-brand-orange/40 bg-brand-orange/5 p-4">
               <div className="flex items-center gap-2 mb-2">
-                <BookOpen className="h-4 w-4 text-brand-orange" />
+                <Icon icon="lucide:book-open" className="h-4 w-4 text-brand-orange" />
                 <span className="text-[11px] font-bold uppercase tracking-wider text-brand-deep">
                   Artigo relacionado
                 </span>
@@ -74,7 +112,7 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
                     className="inline-flex w-fit items-center gap-1 text-sm font-semibold text-brand-orange hover:underline"
                   >
                     {endpoint.article_label ?? "Ler documentação completa"}
-                    <ExternalLink className="h-3.5 w-3.5" />
+                    <Icon icon="lucide:external-link" className="h-3.5 w-3.5" />
                   </a>
                 )}
 
@@ -86,7 +124,7 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
                     className="inline-flex w-fit items-center gap-1 text-sm font-semibold text-brand-orange hover:underline"
                   >
                     {endpoint.examples_label ?? "Ver exemplos no GitHub"}
-                    <ExternalLink className="h-3.5 w-3.5" />
+                    <Icon icon="lucide:external-link" className="h-3.5 w-3.5" />
                   </a>
                 )}
 
@@ -98,7 +136,7 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
                     className="inline-flex w-fit items-center gap-1 text-sm font-semibold text-brand-orange hover:underline"
                   >
                     {endpoint.layout_label ?? "Ver layout"}
-                    <ExternalLink className="h-3.5 w-3.5" />
+                    <Icon icon="lucide:external-link" className="h-3.5 w-3.5" />
                   </a>
                 )}
               </div>
@@ -146,9 +184,23 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
                   Response
                 </button>
               )}
+              <button
+                role="tab"
+                aria-selected={tab === "curl"}
+                onClick={() => setTab("curl")}
+                className={cn(
+                  "px-4 py-1.5 text-sm font-semibold rounded-md transition-all",
+                  tab === "curl"
+                    ? "bg-card text-brand-deep shadow-sm"
+                    : "text-muted-foreground hover:text-brand-deep",
+                )}
+              >
+                cURL
+              </button>
             </div>
             {tab === "request" && hasReq && <CodeBlock value={endpoint.request_body} />}
             {tab === "response" && hasRes && <CodeBlock value={endpoint.response_body} />}
+            {tab === "curl" && <CodeBlock value={curlSnippet} language="text" />}
           </div>
         )}
       </div>
