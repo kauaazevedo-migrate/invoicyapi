@@ -10,7 +10,7 @@ export function OverviewSection() {
           Documentação técnica
         </span>
         <h1 className="text-3xl md:text-4xl font-extrabold text-brand-deep tracking-tight mb-3">
-          Bem-vindo a documentação do InvoiCy!
+          Bem-vindo a Documentação do InvoiCy!
         </h1>
         <p className="text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl">
           Tudo o que você precisa para integrar NF-e, NFC-e, NFS-e, CT-e, MDF-e e NFCom à sua
