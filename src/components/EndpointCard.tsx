@@ -25,7 +25,6 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
   const curlSnippet = buildCurl(endpoint, baseUrl);
 
   const { copied: pathCopied, copy: copyPath } = useCopyToClipboard();
-  const { copied: linkCopied, copy: copyLink } = useCopyToClipboard();
   const hasRelatedContent =
     !!endpoint.article_url ||
     !!endpoint.examples_url ||
@@ -67,20 +66,6 @@ export function EndpointCard({ endpoint, category }: EndpointCardProps) {
                   <Icon
                     icon={pathCopied ? "lucide:check" : "lucide:copy"}
                     className={cn("h-3.5 w-3.5", pathCopied && "text-[hsl(var(--method-get))]")}
-                  />
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    copyLink(`${window.location.origin}${window.location.pathname}#${endpoint.id}`)
-                  }
-                  aria-label="Copiar link do endpoint"
-                  className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-border bg-secondary/60 text-muted-foreground hover:text-brand-deep transition-colors"
-                  title={linkCopied ? "Link copiado!" : "Copiar link compartilhável"}
-                >
-                  <Icon
-                    icon={linkCopied ? "lucide:check" : "lucide:link"}
-                    className={cn("h-3.5 w-3.5", linkCopied && "text-[hsl(var(--method-get))]")}
                   />
                 </button>
               </div>

@@ -241,11 +241,6 @@ function FolderBlock({
         <span className="text-[12px] font-semibold uppercase tracking-wider flex-1 text-left">
           {title}
         </span>
-        {count !== undefined && (
-          <span className="text-[10px] font-bold text-sidebar-muted bg-sidebar-deep px-1.5 py-0.5 rounded">
-            {count}
-          </span>
-        )}
       </button>
       {open && <ul className="mt-0.5 space-y-0.5 pl-2">{children}</ul>}
     </div>
