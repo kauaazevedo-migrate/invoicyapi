@@ -17,24 +17,6 @@ Este projeto é uma **Single Page Application (SPA)** construída com React + Ty
 
 ---
 
-## Stack Tecnológica
-
-| Camada | Tecnologia |
-|---|---|
-| Framework | React 19 + TypeScript 6 |
-| Bundler | Vite 8 |
-| Roteamento | React Router v7 |
-| UI Components | shadcn/ui (Radix UI) |
-| Estilização | Tailwind CSS v4 (`@theme` em CSS) |
-| Animações | tw-animate-css |
-| Estado assíncrono | TanStack React Query v5 |
-| Formulários | React Hook Form + Zod 4 |
-| Ícones | Lucide React |
-| Notificações | Sonner |
-| Testes | Vitest 4 + Testing Library |
-
----
-
 ## Funcionalidades
 
 - **Navegação por scroll-spy** — sidebar destaca automaticamente a seção visível na tela
@@ -62,37 +44,6 @@ Este projeto é uma **Single Page Application (SPA)** construída com React + Ty
 | NFCom | Nota Fiscal de Comunicação |
 | MDF-e | Manifesto Eletrônico de Documentos Fiscais |
 | CT-e | Conhecimento de Transporte Eletrônico |
-
----
-
-## Estrutura do Projeto
-
-```
-src/
-├── components/
-│   ├── ui/                        # Componentes shadcn/ui
-│   ├── AuthenticationSection.tsx  # Documentação de autenticação JWT
-│   ├── EndpointCard.tsx           # Card individual de endpoint
-│   ├── EndpointsSections.tsx      # Agrupamento de endpoints por categoria
-│   ├── ReturnCodesTable.tsx       # Tabela de códigos de retorno paginada
-│   ├── OverviewSection.tsx        # Visão geral e ambientes
-│   ├── Sidebar.tsx                # Navegação com busca e scroll-spy
-│   └── CodeBlock.tsx              # Bloco de código com highlight
-├── data/
-│   ├── endpoints.json             # Especificações de todos os endpoints (~8500 linhas)
-│   └── returnCodes.json           # Códigos de status e mensagens
-├── lib/
-│   ├── api-data.ts                # Gerenciamento e agrupamento de dados
-│   └── extensions-menu.ts         # Agrupamento de extensões no menu
-├── pages/
-│   ├── Index.tsx                  # Página principal
-│   └── NotFound.tsx               # Página 404
-├── types/
-│   └── api.ts                     # Interfaces TypeScript
-└── hooks/
-    ├── use-mobile.tsx             # Hook de breakpoint responsivo
-    └── use-toast.ts               # Hook de notificações
-```
 
 ---
 
@@ -176,4 +127,4 @@ Consulte a seção "Autenticação" no próprio portal para o fluxo completo com
 
 ## Licença
 
-Propriedade da **Migrate Tecnologia**. Todos os direitos reservados.
+Propriedade da **MIGRATE SISTEMAS DE INFORMAÇÃO LTDA**. Todos os direitos reservados.
